@@ -23,5 +23,18 @@ let cards = [
 ]
 
 function moveCard(qtyMoves){
-  console.log(qtyMoves);
+  //refers back to "moves" variable in the main game files
+  moves = qtyMoves;
+}
+
+function movePlayer(action){
+  switch(action){
+    case 0://up
+      //global variables
+      playerVelocityY = -BLOCK_SIZE/MOVEMENT_TICKS;
+      playerClock = 1;
+    break;
+    default:
+      alert("Error: unknown player move");
+  }
 }
